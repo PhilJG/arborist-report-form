@@ -14,14 +14,13 @@
       <input type="email" name="email" id="email" />
       <br />
       <label for="address">address</label>
-      <textarea
+      <input
         name="address"
         id="autocomplete"
         placeholder="Enter your address"
         type="text"
-        cols="30"
-        rows="10"
-      ></textarea>
+     
+      ></input>
       <br />
       <label for="message">Message</label>
       <textarea name="message" id="message" cols="30" rows="10"></textarea>
@@ -35,7 +34,7 @@
           document.getElementById("autocomplete"),
           {
             types: ["establishment"],
-            componentRestrictions: { country: ["US"] },
+            componentRestrictions: { country: ["CA"] },
             fields: ["place_id", "geometry", "name"],
           }
         );
@@ -49,7 +48,7 @@
           document.getElementById("autocomplete").placeholder =
             "Enter your address";
         } else {
-          document.getElementById("details").innerHTML = place.name;
+          document.getElementById("autocomplete").innerHTML = place.name;
         }
       }
     </script>
