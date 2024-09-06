@@ -42,40 +42,7 @@
       <br />
       <input type="submit" value="Submit" />
     </form>
-    <!-- <script>
-      let autocomplete;
-      function initAutocomplete() {
-        autocomplete = new google.maps.places.Autocomplete(
-          document.getElementById("autocomplete"),
-          {
-            types: ["establishment"],
-            componentRestrictions: { country: ["CA"] },
-            fields: ["place_id", "geometry", "name"],
-          }
-        );
-        autocomplete.addListener("place_changed", onPlaceChanged);
-      }
-
-      function onPlaceChanged() {
-        let place = autocomplete.getPlace();
-
-        if (!place.geometry) {
-          document.getElementById("autocomplete").placeholder =
-            "Enter your address";
-        } else {
-          document.getElementById("autocomplete").innerHTML = place.name;
-        }
-      }
-
-      function onsubmit() {
-          
-      }
-    </script> -->
-    <!-- <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCD2Ep8zBwkxym0ysUGCDmp-rFg_7nG8N4&loading=async&libraries=places&callback=initAutocomplete"
-      async
-      defer
-    ></script> -->
+    
     <script src="form.js"></script>
   </body>
 </html>
