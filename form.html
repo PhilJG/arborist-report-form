@@ -4,9 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arborist Report Request</title>
+      <style>
+        #autocompleteResults {
+            position: absolute;
+            z-index: 1000;
+            background-color: white;
+            border: 1px solid #ccc;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        #autocompleteResults div:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
   </head>
   <body>
-    <form action="">
+    <form action="https://script.google.com/u/0/home/projects/1jCetlBOb_6LQSHX0MIZsD8t23k755-EQCr6G-KQ53aGhHMKXD24tB6z5"
+      method="POST" >
       <label for="name">Name</label>
       <input type="text" name="name" id="name" />
       <br />
@@ -16,18 +30,19 @@
       <label for="address">address</label>
       <input
         name="address"
-        id="autocomplete"
+        id="addressInput"
         placeholder="Enter your address"
         type="text"
      
       ></input>
+          <div id="autocompleteResults"></div>
       <br />
       <label for="message">Message</label>
       <textarea name="message" id="message" cols="30" rows="10"></textarea>
       <br />
       <input type="submit" value="Submit" />
     </form>
-    <script>
+    <!-- <script>
       let autocomplete;
       function initAutocomplete() {
         autocomplete = new google.maps.places.Autocomplete(
@@ -51,11 +66,16 @@
           document.getElementById("autocomplete").innerHTML = place.name;
         }
       }
-    </script>
-    <script
+
+      function onsubmit() {
+          
+      }
+    </script> -->
+    <!-- <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCD2Ep8zBwkxym0ysUGCDmp-rFg_7nG8N4&loading=async&libraries=places&callback=initAutocomplete"
       async
       defer
-    ></script>
+    ></script> -->
+    <script src="form.js"></script>
   </body>
 </html>
